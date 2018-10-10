@@ -6,11 +6,16 @@ var colorDisplay = document.getElementById("colorDisplay");
 colorDisplay.textContent = pickedColor;
 var messageDisplay = document.getElementById("message");
 var h1=document.getElementsByTagName("h1");
+var resetButton=document.getElementById("reset");
 
+function changeSqColor() {
 for (var i = 0; i < squares.length; i++) {
     squares[i].style.background = colors[i];
     squares[i].addEventListener("click", funcCompareColors);
 }
+}
+
+changeSqColor();
 
 function funcCompareColors() {
     var clickedColor = this.style.background;
@@ -52,3 +57,29 @@ function randomColor(){
 	var b=Math.floor(Math.random()*256);
 	return "rgb("+r+", "+g+", "+b+")";
 }
+
+resetButton.addEventListener("click", resetGame);
+
+function resetGame (){
+	var colors = generateRandomColors(6);
+	 pickedColor = pickColor();
+	 colorDisplay.textContent = pickedColor;
+	 messageDisplay.textContent = "";
+    changeSqColor();
+}
+	 // for (var i = 0; i < squares.length; i++) {
+  //   squares[i].style.background = colors[i];}
+
+
+
+
+//   function bar()
+//   {
+//     console.log( 'bar' );
+//   }
+
+// function zzz (){
+// 	bar();
+// }
+
+// zzz();
