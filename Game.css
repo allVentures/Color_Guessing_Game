@@ -39,6 +39,7 @@ button {
 	background-color: white;
 	color: #0099ff;
 	border: 0;
+	outline: none;
 	font-size: inherit;
 	font-family: inherit;
 	font-weight: inherit;
@@ -46,7 +47,7 @@ button {
 	height: 100%;
 }
 
-button:hover {
+button:hover  {
 	background-color: #0099ff;
 	color: white;
 }
@@ -77,4 +78,8 @@ button:hover {
 	padding-bottom: 30%;
 	border-radius: 20%;
 	border: 2px solid white;
+}
+.selected {
+	background-color: #005c99;
+	color: white;
 }
